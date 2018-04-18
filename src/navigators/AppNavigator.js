@@ -9,22 +9,20 @@ import { connect } from 'react-redux';
 import { StackNavigator,TabNavigator} from 'react-navigation';
 import {Image,StyleSheet} from 'react-native'
 import LoginScreen from '../pages/login';
-import MainScreen from '../pages/home';
 import ProfileScreen from '../pages/find';
 import { addListener } from '../utils/redux';
- import HomeScreen from '../pages/home';
- import FindScreen from '../pages/find';
- import ProductScreen from '../pages/product'
- import MineScreen from '../pages/mine'
- import Detail from '../pages/product/gather/detail'
- import tabIconOneDefault from '../assets/img/tab1.png'
- import tabIconOneActive from '../assets/img/tab1h.png'
- import tabIconTwoDefault from '../assets/img/tab2.png'
- import tabIconTwoActive from '../assets/img/tab2h.png'
- import tabIconThreeDefault from '../assets/img/tab3.png'
- import tabIconThreeActive from '../assets/img/tab3h.png'
- import tabIconFourDefault from '../assets/img/tab4.png'
- import tabIconFourActive from '../assets/img/tab4h.png'
+import HomeScreen from '../pages/home';
+import FindScreen from '../pages/find';
+import ProductScreen from '../pages/product'
+import MineScreen from '../pages/mine'
+import tabIconOneDefault from '../assets/img/tab1.png'
+import tabIconOneActive from '../assets/img/tab1h.png'
+import tabIconTwoDefault from '../assets/img/tab2.png'
+import tabIconTwoActive from '../assets/img/tab2h.png'
+import tabIconThreeDefault from '../assets/img/tab3.png'
+import tabIconThreeActive from '../assets/img/tab3h.png'
+import tabIconFourDefault from '../assets/img/tab4.png'
+import tabIconFourActive from '../assets/img/tab4h.png'
 
  const TabNavRoot=TabNavigator({Home: {
        screen: HomeScreen,

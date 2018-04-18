@@ -4,7 +4,8 @@
  * Time: 2018/4/6 17:59
  */
 import React,{Component} from 'react'
-import {View,Text,SafeAreaView,StatusBar,Button,ScrollView,StyleSheet}from 'react-native'
+import {View,Text,StatusBar}from 'react-native'
+import {connect}from 'react-redux'
 class Index extends Component{
     constructor(props){
         super(props);
@@ -22,14 +23,29 @@ class Index extends Component{
     componentWillUnmount() {
         this._navListener.remove();
     }
+    handlePress=()=>{
+        this.props.test();
+    }
     render() {
         return (
             <View>
-                <Text>
+                <Text onPress={this.handlePress}>
                     我是产品页面
                 </Text>
             </View>
         );
     }
 }
-export  default  Index
+const mapStateToProps=(state)=>({
+    data:"sss"
+});
+const mapDispatchToProps=(dispatch)=>({
+    test(){
+        alert('s')
+        dispatch({
+            type:'TEST',
+            params:'dade'
+        })
+    }
+})
+export  default connect(mapStateToProps,mapDispatchToProps)(Index)
