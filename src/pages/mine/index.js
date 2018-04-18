@@ -25,7 +25,7 @@ class Index extends Component{
         this._navListener.remove();
     }
     handPress=()=>{
-        this.props.push('Main')
+        this.props.push('Login')
     };
     render() {
         return (
@@ -38,7 +38,6 @@ class Index extends Component{
     }
 }
 const mapStateToProps=(state)=>{
-    alert(JSON.stringify(state))
     return{
         a:"ss"
     }
