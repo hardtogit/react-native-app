@@ -16,6 +16,9 @@ class Index extends Component {
             StatusBar.setBarStyle('dark-content');
             StatusBar.setBackgroundColor('#ecf0f1');
         });
+        fetch('http://xiaoshiyin-api.devbao.cn/directInvest/projects?page=1').then((response)=> {
+            return response.json();
+        }).then((response)=>alert(JSON.stringify({response})))
     }
 
     componentWillUnmount() {
