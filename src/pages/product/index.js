@@ -27,6 +27,7 @@ class Index extends Component{
         this.props.test();
     }
     render() {
+        console.log(this.props)
         return (
             <View>
                 <Text onPress={this.handlePress}>
@@ -36,12 +37,14 @@ class Index extends Component{
         );
     }
 }
-const mapStateToProps=(state)=>({
-    data:"sss"
-});
+const mapStateToProps=(state)=>{
+    console.log(state)
+    return{
+        productListData:state.listData.TEST
+    }
+};
 const mapDispatchToProps=(dispatch)=>({
     test(){
-        alert('s')
         dispatch({
             type:'TEST',
             params:'dade'

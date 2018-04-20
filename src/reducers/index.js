@@ -5,9 +5,11 @@
  */
 import { combineReducers } from 'redux';
 import nav from './nav.js';
+import listData from './listData'
 
 const AppReducer = combineReducers({
     nav,
+    listData
 });
 
 export default AppReducer;
