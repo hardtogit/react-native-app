@@ -4,9 +4,8 @@
  * Time: 2018/4/6 17:59
  */
 import React,{Component} from 'react'
-import {connect} from 'react-redux'
 import {NavigationActions} from "react-navigation";
-import {View,Text,SafeAreaView,StatusBar,Button,ScrollView,StyleSheet}from 'react-native'
+import {View,Text,StyleSheet}from 'react-native'
 class Index extends Component{
     constructor(props){
         super(props);
@@ -15,21 +14,17 @@ class Index extends Component{
         }
     }
     componentDidMount() {
-        this._navListener = this.props.navigation.addListener('didFocus', () => {
-            StatusBar.setBarStyle('light-content');
-            StatusBar.setBackgroundColor('#6a51ae');
-        });
+
     }
 
     componentWillUnmount() {
-        this._navListener.remove();
+
     }
     handPress=()=>{
-        this.props.push('Login')
     };
     render() {
         return (
-            <View>
+            <View style={styles.container}>
                 <Text onPress={this.handPress}>
                     我是我的页面
                 </Text>
@@ -37,16 +32,10 @@ class Index extends Component{
         );
     }
 }
-const mapStateToProps=(state)=>{
-    return{
-        a:"ss"
+export default Index
+const styles = StyleSheet.create({
+    container:{
+        flex:1
     }
-}
-const mapDispatchToProps=(dispatch)=>({
-    push(routeName){
-        dispatch(NavigationActions.push({
-            routeName:routeName
-        }))
-    }
+
 })
-export  default connect(mapStateToProps,mapDispatchToProps)(Index)

@@ -15,6 +15,7 @@ import HomeScreen from '../pages/home';
 import FindScreen from '../pages/find';
 import ProductScreen from '../pages/product'
 import MineScreen from '../pages/mine'
+import FeedBack from '../pages/ExchangeDiscounts'
 import tabIconOneDefault from '../assets/img/tab1.png'
 import tabIconOneActive from '../assets/img/tab1h.png'
 import tabIconTwoDefault from '../assets/img/tab2.png'
@@ -113,10 +114,11 @@ export const AppNavigator = StackNavigator({
     Root:{screen:TabNavRoot},
     Login: { screen: LoginScreen },
     Profile: { screen: ProfileScreen },
+    FeedBack:{screen:FeedBack},
     initialRouteName:'Root',
     },
     {
-        headerMode: 'none',
+        // headerMode: 'none',
     }
 );
 

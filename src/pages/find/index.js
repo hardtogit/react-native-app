@@ -18,7 +18,7 @@ class Index extends Component {
         });
         fetch('http://xiaoshiyin-api.devbao.cn/directInvest/projects?page=1').then((response)=> {
             return response.json();
-        }).then((response)=>alert(JSON.stringify({response})))
+        }).then((response)=>{})
     }
 
     componentWillUnmount() {
@@ -33,7 +33,7 @@ class Index extends Component {
                 </Text>
                 <Button
                     title="Next screen"
-                    onPress={() => this.props.navigation.navigate('Screen1')}
+                    onPress={() => this.props.navigation.navigate('FeedBack')}
                 />
                 {/* <Button
           title="Toggle Drawer"
